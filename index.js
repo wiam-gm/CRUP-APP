@@ -14,7 +14,7 @@ app.use(express.urlencoded({extended: false}));
 //Routes
 app.use("/products",productRoute);
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI)  
 .then(()=>{
     console.log("Connected to database!");
     app.listen(3000, ()=>{
